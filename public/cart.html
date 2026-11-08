@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Keranjang Belanja - WARUNG UMI</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="navbar-container">
+      <a href="/" class="brand-logo"><i class="fas fa-shopping-basket"></i> WARUNG UMI</a>
+    </div>
+  </nav>
+
+  <div class="section-container">
+    <h2 class="section-title" style="margin-bottom: 1.5rem;"><i class="fas fa-shopping-cart"></i> Keranjang Belanja</h2>
+
+    <div style="background: white; border-radius: 12px; padding: 1.5rem; box-shadow: var(--shadow-sm); overflow-x: auto;">
+      <table style="width: 100%; border-collapse: collapse;">
+        <thead>
+          <tr style="border-bottom: 2px solid #E2E8F0; text-align: left;">
+            <th style="padding: 0.75rem;">Produk</th>
+            <th style="padding: 0.75rem;">Harga</th>
+            <th style="padding: 0.75rem;">Jumlah</th>
+            <th style="padding: 0.75rem;">Subtotal</th>
+            <th style="padding: 0.75rem;">Aksi</th>
+          </tr>
+        </thead>
+        <tbody id="cartTableBody"></tbody>
+      </table>
+    </div>
+
+    <div style="margin-top: 1.5rem; background: white; padding: 1.5rem; border-radius: 12px; display: flex; justify-content: space-between; align-items: center; box-shadow: var(--shadow-sm);">
+      <div>
+        <span style="color: #64748B;">Total Belanja:</span>
+        <h3 id="cartTotalAmount" style="color: #10B981; font-size: 1.5rem;">Rp 0</h3>
+      </div>
+      <a href="/checkout.html" class="btn-hero" style="border: none; cursor: pointer;">Lanjut Checkout <i class="fas fa-arrow-right"></i></a>
+    </div>
+  </div>
+
+  <script src="/js/shop.js"></script>
+  <script src="/js/cart.js"></script>
+</body>
+</html>

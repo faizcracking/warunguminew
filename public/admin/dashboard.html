@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard Admin - WARUNG UMI</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/admin.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="admin-body">
+
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <i class="fas fa-shopping-basket" style="color: #10B981;"></i> WARUNG UMI
+    </div>
+    <ul class="sidebar-menu">
+      <li class="active"><a href="#"><i class="fas fa-chart-line"></i> Overview</a></li>
+      <li><a href="#produk"><i class="fas fa-box"></i> Kelola Produk</a></li>
+      <li><a href="#kategori"><i class="fas fa-tags"></i> Kategori</a></li>
+      <li><a href="#pengaturan"><i class="fas fa-cog"></i> Pengaturan Toko</a></li>
+      <li><a href="javascript:void(0)" onclick="adminLogout()"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+    </ul>
+  </aside>
+
+  <main class="main-content">
+    <div class="admin-header">
+      <div>
+        <h2>Dashboard Panel</h2>
+        <p style="color: #64748B;">Selamat datang kembali, Ibu Admin!</p>
+      </div>
+      <button class="btn-hero" style="border: none; cursor: pointer;"><i class="fas fa-plus"></i> Tambah Produk</button>
+    </div>
+
+    <!-- STATS GRID -->
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div>
+          <div class="stat-label">Total Produk</div>
+          <div class="stat-value" id="statTotalProducts">5</div>
+        </div>
+        <div class="stat-icon"><i class="fas fa-box"></i></div>
+      </div>
+      <div class="stat-card">
+        <div>
+          <div class="stat-label">Produk Tersedia</div>
+          <div class="stat-value" id="statAvailableProducts">5</div>
+        </div>
+        <div class="stat-icon" style="color: #10B981; background: #ECFDF5;"><i class="fas fa-check-circle"></i></div>
+      </div>
+      <div class="stat-card">
+        <div>
+          <div class="stat-label">Stok Habis</div>
+          <div class="stat-value" id="statOutOfStock">0</div>
+        </div>
+        <div class="stat-icon" style="color: #EF4444; background: #FEF2F2;"><i class="fas fa-exclamation-triangle"></i></div>
+      </div>
+      <div class="stat-card">
+        <div>
+          <div class="stat-label">Total Pesanan</div>
+          <div class="stat-value" id="statTotalOrders">12</div>
+        </div>
+        <div class="stat-icon" style="color: #3B82F6; background: #EFF6FF;"><i class="fas fa-shopping-bag"></i></div>
+      </div>
+    </div>
+
+    <!-- RECENT ORDERS / MANAGE PRODUCTS TABLE -->
+    <div class="table-card" id="produk">
+      <div style="display: flex; justify-content: space-between; align-items: center;">
+        <h3>Daftar Produk & Diskon Shopee-Style</h3>
+      </div>
+      <table class="custom-table">
+        <thead>
+          <tr>
+            <th>Produk</th>
+            <th>Kategori</th>
+            <th>Harga Normal</th>
+            <th>Status Promo</th>
+            <th>Harga Promo</th>
+            <th>Stok</th>
+            <th>Aksi</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Beras Lahap 5 kg</strong></td>
+            <td>Sembako</td>
+            <td>Rp 75.000</td>
+            <td><span style="background: #FEF2F2; color: #EF4444; padding: 2px 8px; border-radius: 4px; font-weight: 700;">Diskon 10%</span></td>
+            <td><strong>Rp 67.500</strong></td>
+            <td>50</td>
+            <td>
+              <button style="background: #3B82F6; color: white; border: none; padding: 4px 8px; border-radius: 4px; cursor: pointer;">Edit</button>
+            </td>
+          </tr>
+          <tr>
+            <td><strong>Gula GMP 1 kg</strong></td>
+            <td>Sembako</td>
+            <td>Rp 18.000</td>
+            <td><span style="background: #F1F5F9; color: #64748B; padding: 2px 8px; border-radius: 4px;">Normal</span></td>
+            <td><strong>Rp 18.000</strong></td>
+            <td>100</td>
+            <td>
+              <button style="background: #3B82F6; color: white; border: none; padding: 4px 8px; border-radius: 4px; cursor: pointer;">Edit</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+  <script src="/js/admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Admin - WARUNG UMI</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body style="background: #0F172A; display: flex; align-items: center; justify-content: center; min-height: 100vh;">
+
+  <div style="background: white; width: 100%; max-width: 400px; padding: 2.5rem; border-radius: 16px; box-shadow: 0 20px 25px -5px rgba(0,0,0,0.3);">
+    <div style="text-align: center; margin-bottom: 2rem;">
+      <i class="fas fa-user-shield" style="font-size: 2.5rem; color: #10B981;"></i>
+      <h2 style="color: #0F172A; font-weight: 800; margin-top: 0.5rem;">Dashboard Admin</h2>
+      <p style="color: #64748B; font-size: 0.9rem;">Masuk untuk mengelola Warung Umi</p>
+    </div>
+
+    <div id="loginError" style="display: none; background: #FEE2E2; color: #DC2626; padding: 0.75rem; border-radius: 8px; font-size: 0.85rem; margin-bottom: 1rem;"></div>
+
+    <form id="adminLoginForm">
+      <div style="margin-bottom: 1.25rem;">
+        <label style="display: block; font-weight: 600; margin-bottom: 0.4rem; font-size: 0.9rem;">Username / Email Admin</label>
+        <input type="text" id="adminUser" required placeholder="admin123" style="width: 100%; padding: 0.75rem; border: 1px solid #CBD5E1; border-radius: 8px;">
+      </div>
+
+      <div style="margin-bottom: 1.5rem;">
+        <label style="display: block; font-weight: 600; margin-bottom: 0.4rem; font-size: 0.9rem;">Password</label>
+        <input type="password" id="adminPass" required placeholder="••••••••" style="width: 100%; padding: 0.75rem; border: 1px solid #CBD5E1; border-radius: 8px;">
+      </div>
+
+      <button type="submit" id="btnLogin" class="btn-hero" style="width: 100%; justify-content: center; border: none; font-size: 1rem; cursor: pointer;">
+        <i class="fas fa-sign-in-alt"></i> Masuk Dashboard
+      </button>
+    </form>
+  </div>
+
+  <script style="text/javascript">
+    document.getElementById('adminLoginForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const user = document.getElementById('adminUser').value.trim();
+      const pass = document.getElementById('adminPass').value.trim();
+      const errBox = document.getElementById('loginError');
+
+      errBox.style.display = 'none';
+
+      // Simulation for demo mode (or integrate Supabase Auth JS)
+      if (user === 'admin123' && pass === 'admin123') {
+        localStorage.setItem('warung_umi_admin_token', 'demo-admin-token-umi-2026');
+        window.location.href = '/admin/dashboard.html';
+      } else {
+        errBox.textContent = 'Username atau Password salah!';
+        errBox.style.display = 'block';
+      }
+    });
+  </script>
+</body>
+</html>

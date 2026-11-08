@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout WhatsApp - WARUNG UMI</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="navbar-container">
+      <a href="/" class="brand-logo"><i class="fas fa-shopping-basket"></i> WARUNG UMI</a>
+    </div>
+  </nav>
+
+  <div class="section-container" style="max-width: 800px;">
+    <h2 class="section-title" style="margin-bottom: 1.5rem;"><i class="fab fa-whatsapp"></i> Form Pemesanan WhatsApp</h2>
+
+    <div style="display: grid; grid-template-columns: 1fr; gap: 1.5rem;">
+      <form id="checkoutForm" style="background: white; padding: 1.75rem; border-radius: 12px; box-shadow: var(--shadow-sm);">
+        <div style="margin-bottom: 1rem;">
+          <label style="display: block; font-weight: 600; margin-bottom: 0.4rem;">Nama Lengkap *</label>
+          <input type="text" id="custName" required placeholder="Contoh: Ahmad" style="width: 100%; padding: 0.75rem; border: 1px solid #CBD5E1; border-radius: 8px;">
+        </div>
+
+        <div style="margin-bottom: 1rem;">
+          <label style="display: block; font-weight: 600; margin-bottom: 0.4rem;">Nomor WhatsApp / HP *</label>
+          <input type="tel" id="custPhone" required placeholder="Contoh: 081234567890" style="width: 100%; padding: 0.75rem; border: 1px solid #CBD5E1; border-radius: 8px;">
+        </div>
+
+        <div style="margin-bottom: 1rem;">
+          <label style="display: block; font-weight: 600; margin-bottom: 0.4rem;">Metode Pengiriman *</label>
+          <select id="deliveryType" style="width: 100%; padding: 0.75rem; border: 1px solid #CBD5E1; border-radius: 8px;">
+            <option value="delivery">Diantar ke Rumah</option>
+            <option value="pickup">Ambil Sendiri di Toko</option>
+          </select>
+        </div>
+
+        <div style="margin-bottom: 1rem;">
+          <label style="display: block; font-weight: 600; margin-bottom: 0.4rem;">Alamat Lengkap *</label>
+          <textarea id="custAddress" required rows="3" placeholder="Contoh: Jl. Melati No. 12, Jaten, Karanganyar" style="width: 100%; padding: 0.75rem; border: 1px solid #CBD5E1; border-radius: 8px;"></textarea>
+        </div>
+
+        <div style="margin-bottom: 1.5rem;">
+          <label style="display: block; font-weight: 600; margin-bottom: 0.4rem;">Catatan Pesanan (Opsional)</label>
+          <input type="text" id="custNotes" placeholder="Contoh: Mohon diantar sebelum jam 5 sore" style="width: 100%; padding: 0.75rem; border: 1px solid #CBD5E1; border-radius: 8px;">
+        </div>
+
+        <div style="background: #F8FAFC; padding: 1rem; border-radius: 8px; margin-bottom: 1.5rem;">
+          <h4 style="margin-bottom: 0.5rem; color: #0F172A;">Ringkasan Belanja</h4>
+          <div id="checkoutItemsSummary"></div>
+          <div style="border-top: 1px solid #E2E8F0; margin-top: 0.5rem; padding-top: 0.5rem; display: flex; justify-content: space-between; font-weight: 800; font-size: 1.1rem; color: #10B981;">
+            <span>Total Akhir:</span>
+            <span id="checkoutGrandTotal">Rp 0</span>
+          </div>
+        </div>
+
+        <button type="submit" id="btnSubmitCheckout" class="btn-hero" style="width: 100%; justify-content: center; border: none; font-size: 1rem; cursor: pointer;">
+          <i class="fab fa-whatsapp" style="font-size: 1.2rem;"></i> Kirim Pesanan ke WhatsApp
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <script src="/js/checkout.js"></script>
+</body>
+</html>

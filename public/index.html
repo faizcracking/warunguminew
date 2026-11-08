@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WARUNG UMI - Online Grocery Store</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="navbar-container">
+      <a href="/" class="brand-logo">
+        <i class="fas fa-shopping-basket"></i>
+        <span>WARUNG UMI</span>
+      </a>
+
+      <div class="search-box">
+        <i class="fas fa-search"></i>
+        <input type="text" id="searchInput" placeholder="Cari beras, gula, minyak, indomie...">
+      </div>
+
+      <div class="nav-actions">
+        <a href="/cart.html" class="cart-icon-btn">
+          <i class="fas fa-shopping-cart"></i>
+          <span class="cart-badge" id="cartBadge">0</span>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO BANNER -->
+  <section class="hero-banner">
+    <div class="hero-content">
+      <span class="hero-badge"><i class="fas fa-bolt"></i> Belanja Praktis & Hemat</span>
+      <h1 class="hero-title">Kebutuhan Dapur Lengkap, Kirim Langsung ke Rumah!</h1>
+      <p class="hero-subtitle">Pesan via online, bayar dan konfirmasi langsung via WhatsApp. Nikmati Promo Diskon Shopee-style setiap hari.</p>
+      <a href="#katalog" class="btn-hero"><i class="fas fa-store"></i> Lihat Produk</a>
+    </div>
+  </section>
+
+  <!-- PROMO BANNER SECTION -->
+  <section class="section-container" id="promoSection">
+    <div class="section-header">
+      <h2 class="section-title" style="color: #EF4444;"><i class="fas fa-fire"></i> Promo Spesial Hemat</h2>
+    </div>
+    <div class="product-grid" id="promoGrid"></div>
+  </section>
+
+  <!-- CATEGORIES -->
+  <section class="section-container">
+    <div class="section-header">
+      <h2 class="section-title"><i class="fas fa-th-large"></i> Kategori Produk</h2>
+    </div>
+    <div class="category-scroll" id="categoryContainer"></div>
+  </section>
+
+  <!-- ALL PRODUCTS -->
+  <section class="section-container" id="katalog">
+    <div class="section-header">
+      <h2 class="section-title"><i class="fas fa-box-open"></i> Katalog Produk</h2>
+    </div>
+    <div class="product-grid" id="productGrid"></div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-col">
+        <h4>WARUNG UMI</h4>
+        <p>Toko kelontong keluarga terpercaya. Menyediakan kebutuhan pokok harian murah dan lengkap.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Kontak Resmi</h4>
+        <p><i class="fab fa-whatsapp"></i> WhatsApp: 085213205216</p>
+        <p><i class="fas fa-map-marker-alt"></i> Alamat: Jaten, Karanganyar</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2026 WARUNG UMI - Online Grocery Store. All Rights Reserved.
+    </div>
+  </footer>
+
+  <!-- MOBILE NAVIGATION -->
+  <div class="mobile-nav">
+    <a href="/" class="mobile-nav-item active"><i class="fas fa-home"></i> Beranda</a>
+    <a href="#katalog" class="mobile-nav-item"><i class="fas fa-store"></i> Katalog</a>
+    <a href="/cart.html" class="mobile-nav-item"><i class="fas fa-shopping-cart"></i> Keranjang</a>
+    <a href="/admin/login.html" class="mobile-nav-item"><i class="fas fa-user-lock"></i> Admin</a>
+  </div>
+
+  <script src="/js/shop.js"></script>
+</body>
+</html>
